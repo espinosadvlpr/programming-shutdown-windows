@@ -65,7 +65,8 @@ def shutdown_now():
 
 def shutdown_cancel():
     os.system('shutdown /a')
- 
+
+
 root = tkinter.Tk()
 root.title("Sleep")
 frame_left = tkinter.Frame()
@@ -74,35 +75,34 @@ frame_right = tkinter.Frame()
 
 clock = tkinter.Label(root, font=('Consolas', 40), fg="black")
 clock.pack()
-label = tkinter.Label(root, text="Apagado: ")
-label.pack(side= 'top')
-label_espacio = tkinter.Label(root, text=" ")
-label_espacio.pack()
-boton1 = tkinter.Button(frame_left, text="10 Minutos", command=shutdown_10)
-boton1.pack()
-boton2 = tkinter.Button(frame_center, text="15 Minutos", command=shutdown_15)
-boton2.pack()
-boton3 = tkinter.Button(frame_right, text="20 Minutos", command=shutdown_20)
-boton3.pack()
-boton4 = tkinter.Button(frame_left, text="30 Minutos", command=shutdown_30)
-boton4.pack()
-boton5 = tkinter.Button(frame_center, text="40 Minutos", command=shutdown_40)
-boton5.pack()
-boton6 = tkinter.Button(frame_right, text="50 Minutos", command=shutdown_15)
-boton6.pack()
-boton7 = tkinter.Button(frame_left, text="1 Hora", command=shutdown_hour)
-boton7.pack()
-boton8 = tkinter.Button(frame_center, text="2 Horas", command=shutdown_2)
-boton8.pack()
-boton9 = tkinter.Button(frame_right, text="3 Horas", command=shutdown_3)
-boton9.pack()
-boton10 = tkinter.Button(frame_left, text="Apagar ahora", command=shutdown_now)
-boton10.pack()
-boton11 = tkinter.Button(
-frame_center, text="Cancelar apagado", command=shutdown_cancel)
-boton11.pack()
-boton12 = tkinter.Button(frame_right, text="Salir", command=root.quit)
-boton12.pack()
+
+tkinter.Label(root, font=('Consolas', 14),text="Apagado: ").pack(side='top')
+tkinter.Label(root, text=" ").pack()
+
+tkinter.Button(frame_left, text="10 Minutos",
+               command=shutdown_10).pack(fill=tkinter.BOTH)
+tkinter.Button(frame_center, text="15 Minutos",
+               command=shutdown_15).pack(fill=tkinter.BOTH)
+tkinter.Button(frame_right, text="20 Minutos",
+               command=shutdown_20).pack(fill=tkinter.BOTH)
+tkinter.Button(frame_left, text="30 Minutos",
+               command=shutdown_30).pack(fill=tkinter.BOTH)
+tkinter.Button(frame_center, text="40 Minutos",
+               command=shutdown_40).pack(fill=tkinter.BOTH)
+tkinter.Button(frame_right, text="50 Minutos",
+               command=shutdown_15).pack(fill=tkinter.BOTH)
+tkinter.Button(frame_left, text="1 Hora",
+               command=shutdown_hour).pack(fill=tkinter.BOTH)
+tkinter.Button(frame_center, text="2 Horas",
+               command=shutdown_2).pack(fill=tkinter.BOTH)
+tkinter.Button(frame_right, text="3 Horas",
+               command=shutdown_3).pack(fill=tkinter.BOTH)
+tkinter.Button(frame_left, text="Apagar ahora",
+               command=shutdown_now).pack(fill=tkinter.BOTH)
+tkinter.Button(
+    frame_center, text="Cancelar apagado", command=shutdown_cancel).pack(fill=tkinter.BOTH)
+tkinter.Button(frame_right, text="Salir",
+               command=root.quit).pack(fill=tkinter.BOTH)
 
 frame_left.pack(side='left', fill='y', expand='1')
 frame_right.pack(side='right', fill='y', expand='1')
@@ -110,6 +110,3 @@ frame_center.pack(side='right', fill='y', expand='1')
 
 reloj()
 root.mainloop()
-
-
-
